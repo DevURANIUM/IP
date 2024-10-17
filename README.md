@@ -9,8 +9,8 @@ This script provides detailed information about an IP address by retrieving data
 - Fetches detailed information about an IP address, including ASN, provider, continent, country, region, city, and more.
 - Provides residential check of the IP address, determining if it's a proxy or VPN.
 - Easy-to-use command-line interface with two options:
-  1. **IP Info**: Get general IP information.
-  2. **IP Residential Check**: Check if the IP address is residential and gather additional details.
+   1. **IP Info**: Get general IP information.
+   2. **IP Residential Check**: Check if the IP address is residential and gather additional details.
 
 ## Requirements
 
