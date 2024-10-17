@@ -75,10 +75,8 @@ pip install requests beautifulsoup4
 
 ## Code Overview
 
-- **Banner Printing**: Displays a custom banner when the script starts.
 - **IP Information Retrieval**: Fetches general IP data from Check-host.net, including location, ASN, and ISP.
 - **Residential Check**: Uses Proxycheck.io to determine if the IP is residential, including the provider, ASN, and other details like city, region, and timezone.
-- **CSRF Token Handling**: Automatically retrieves and handles CSRF tokens required for making requests to Check-host.net.
 
 ## Dependencies
 
