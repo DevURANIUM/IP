@@ -52,7 +52,7 @@ pip install requests beautifulsoup4
 1. **Run the script**:
    Start the script by running:
    ```bash
-   python3 ip_check.py
+   python3 ip.py
    ```
 
 2. **Choose an option**:
@@ -64,7 +64,7 @@ pip install requests beautifulsoup4
 1. Run the script:
 
    ```bash
-   python3 ip_check.py
+   python3 ip.py
    ```
 
 2. Enter the IP address when prompted, and choose between:
