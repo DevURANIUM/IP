@@ -1,6 +1,7 @@
 import sys
 import requests
 from bs4 import BeautifulSoup
+import socket  
 
 def print_banner():
     print(f"""
@@ -18,11 +19,20 @@ def print_banner():
 def print_help():
     print(f"""
     \033[96mUsage:\033[0m
-    \033[92m  python ip.py -1 <IP_ADDRESS>\033[0m  : Get detailed IP information.
-    \033[92m  python ip.py -2 <IP_ADDRESS>\033[0m  : Check if the IP is residential.
-    \033[92m  python ip.py <IP_ADDRESS>\033[0m    : Default to checking if the IP is residential.
-    \033[92m  python ip.py -h\033[0m              : Display this help message.
+    \033[92m  python ip.py -1 <IP_OR_DOMAIN>\033[0m  : Get detailed IP information.
+    \033[92m  python ip.py -2 <IP_OR_DOMAIN>\033[0m  : Check if the IP is residential.
+    \033[92m  python ip.py <IP_OR_DOMAIN>\033[0m    : Default to checking if the IP is residential.
+    \033[92m  python ip.py -h\033[0m                : Display this help message.
     """)
+
+def resolve_to_ip(address):
+    """Resolve a domain name to an IP address. If already an IP, return as is."""
+    try:
+        ip_address = socket.gethostbyname(address)
+        return ip_address
+    except socket.gaierror:
+        print(f"\033[91mError: Unable to resolve domain '{address}' to an IP address.\033[0m")
+        return None
 
 def get_csrf_token():
     url = "https://check-host.net/ip-info"
@@ -118,9 +128,10 @@ def main():
         return
 
     if len(sys.argv) == 2 and not sys.argv[1].startswith('-'):
-        # Default to '-2' if only an IP address is provided
-        ip_address = sys.argv[1]
-        check_ip_residential(ip_address)
+        address = sys.argv[1]
+        ip_address = resolve_to_ip(address)
+        if ip_address:
+            check_ip_residential(ip_address)
         return
 
     option = sys.argv[1]
@@ -129,10 +140,14 @@ def main():
         print_help()
     elif option in ['-1', '-2']:
         if len(sys.argv) < 3:
-            print("\033[91mError: IP address is required.\033[0m")
+            print("\033[91mError: IP address or domain is required.\033[0m")
             return
         
-        ip_address = sys.argv[2]
+        address = sys.argv[2]
+        ip_address = resolve_to_ip(address)
+        if not ip_address:
+            return
+
         if option == '-1':
             get_ip_info(ip_address)
         elif option == '-2':
