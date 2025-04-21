@@ -34,7 +34,7 @@ pip install requests beautifulsoup4
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/DevURANIUM/IP.git
+   git clone https://github.com/noarche/IP
    cd IP
    ```
 
@@ -52,31 +52,15 @@ pip install requests beautifulsoup4
 1. **Run the script**:
    Start the script by running:
    ```bash
-   python3 ip.py
+   python3 ip.py 127.0.0.1
    ```
-
-2. **Choose an option**:
-   - **Option 1**: Enter `1` to retrieve general IP information from [Check-host.net](https://check-host.net/).
-   - **Option 2**: Enter `2` to check if the IP is residential using [Proxycheck.io](https://proxycheck.io/).
-
-### Example
-
-1. Run the script:
-
-   ```bash
-   python3 ip.py
-   ```
-
-2. Enter the IP address when prompted, and choose between:
-   - **Option 1**: General IP Info (Check-host.net)
-   - **Option 2**: Residential Check (Proxycheck.io)
 
    The script will display detailed information about the IP address, including its location, ASN, provider, and whether it is a proxy or VPN.
 
 ## Code Overview
 
-- **IP Information Retrieval**: Fetches general IP data from Check-host.net, including location, ASN, and ISP.
-- **Residential Check**: Uses Proxycheck.io to determine if the IP is residential, including the provider, ASN, and other details like city, region, and timezone.
+- **python ip.py -1 127.0.0.1**: Fetches general IP data from Check-host.net, including location, ASN, and ISP.
+- **python ip.py 127.0.0.1**: Uses Proxycheck.io to determine if the IP is residential, including the provider, ASN, and other details like city, region, and timezone.
 
 ## Dependencies
 
@@ -93,22 +77,27 @@ pip install requests beautifulsoup4
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support & Contributions
 
-If you encounter any issues or have suggestions for improvement, please reach out via:
+# ꧁꧂  Buy me a coffee ☕
 
-- [Telegram](https://t.me/DevURANIUM)
-- [GitHub Issues](https://github.com/DevURANIUM/IP/issues)
+![qrCode](https://raw.githubusercontent.com/noarche/cd-ripper/main/unrelated-ignore/CryptoQRcodes.png)
 
-## Donation Links
+**Bitcoin** address `bc1qnpjpacyl9sff6r4kfmn7c227ty9g50suhr0y9j`
 
-Support the project through donations:
 
-- **BTC**: `bc1qcclcp574hnznm0nmdzzf0ta7366svjskttqks3`
-- **TRON**: `TXJqhhwvkrTdnf5HReZf55hEzZuxjto3R4`
-- **USDT-(TRC20)**: `TXJqhhwvkrTdnf5HReZf55hEzZuxjto3R4`
-- **TON**: `UQAJH2N0pqpvC9YN841w5NH1dCN9Lakwkpjvoy7vXf-vfqgv`
+**Ethereum** address `0x94FcBab18E4c0b2FAf5050c0c11E056893134266`
 
----
 
-This file provides an organized and professional overview of the project, similar to the format you requested.
+**Litecoin** address `ltc1qu7ze2hlnkh440k37nrm4nhpv2dre7fl8xu0egx`
+
+
+
+-------------------------------------------------------------------
+
+![noarche's GitHub stats](https://github-readme-stats.vercel.app/api?username=noarche&show_icons=true&theme=transparent)
+
+
+## Credits
+
+This script has been updated and customized to my personal preferance, a fork of the [original by devURANIUM](https://github.com/DevURANIUM/IP)
+
