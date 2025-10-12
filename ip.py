@@ -1,67 +1,3 @@
-
-# ###############################
-
-# import requests
-# from bs4 import BeautifulSoup
-
-# print(f"""
-# \033[34m
-# ██╗░░░██╗██████╗░░█████╗░███╗░░██╗██╗██╗░░░██╗███╗░░░███╗
-# ██║░░░██║██╔══██╗██╔══██╗████╗░██║██║██║░░░██║████╗░████║
-# ██║░░░██║██████╔╝███████║██╔██╗██║██║██║░░░██║██╔████╔██║
-# ██║░░░██║██╔══██╗██╔══██║██║╚████║██║██║░░░██║██║╚██╔╝██║
-# ╚██████╔╝██║░░██║██║░░██║██║░╚███║██║╚██████╔╝██║░╚═╝░██║
-# ░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░░░░╚═╝
-      
-#       Dev : DevUranium.t.me
-#       GitHUB : 
-#       """)
-
-# def get_csrf_token():
-#     url = "https://check-host.net/ip-info"
-#     response = requests.get(url)
-#     response.raise_for_status()
-#     soup = BeautifulSoup(response.text, 'html.parser')
-
-#     csrf_token_input = soup.find('input', {'name': 'csrf_token'})
-#     if csrf_token_input:
-#         csrf_token = csrf_token_input['value']
-#         return csrf_token
-#     else:
-#         print("CSRF token not found.")
-#         return None
-
-# def send_request(ip_address):
-#     csrf_token = get_csrf_token()
-#     if csrf_token is not None:
-#         url = f"https://check-host.net/ip-info?host={ip_address}&csrf_token={csrf_token}"
-#         response = requests.get(url)
-#         response.raise_for_status()
-
-#         soup = BeautifulSoup(response.text, 'html.parser')
-#         table = soup.find('table', class_='ipinfo-table')
-
-#         data = {}
-
-#         for row in table.find_all('tr'):
-#             columns = row.find_all('td')
-#             if len(columns) == 2:
-#                 key = columns[0].get_text(strip=True)
-#                 value = columns[1].get_text(strip=True)
-#                 data[key] = value
-
-#         for key, value in data.items():
-#             print(f"{key} : {value}")
-#     else:
-#         print("Cannot send request without CSRF token.")
-
-# ip = input("\033[32mIP Enter : \033[0m")
-
-# send_request(ip)
-
-# ###############################
-
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -184,4 +120,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
