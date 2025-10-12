@@ -97,7 +97,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have suggestions for improvement, please reach out via:
 
-- [Telegram](https://t.me/DevURANIUM)
 - [GitHub Issues](https://github.com/DevURANIUM/IP/issues)
 
 ## Donation Links
